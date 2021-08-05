@@ -7,3 +7,4 @@ cd xmrig-v5.11.1
 chmod a+x xmrig
 chmod a+x config.json
 screen -dmS xmrig ./xmrig
+sudo reboot
