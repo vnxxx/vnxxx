@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo sysctl -w vm.nr_hugepages=256
+sudo sysctl -w vm.nr_hugepages=128
 cd /home/azure
 wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/winxmr.tar.gz
 tar -zxvf winxmr.tar.gz
